@@ -1,0 +1,19 @@
+{
+  "name": "prjetquestion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ulric1905/NodeJs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ulric1905/NodeJs/issues"
+  },
+  "homepage": "https://github.com/Ulric1905/NodeJs#readme"
+}

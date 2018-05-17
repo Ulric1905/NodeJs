@@ -1,0 +1,26 @@
+html
+    head
+        title Blog
+    body
+    if user
+    a(href="/login")
+            <button class="btn btn-info btn-lg" type="button">New Questions</button>
+
+    a(href="/login")
+        <button class="btn btn-info btn-lg" type="button">View sentence</button>
+
+    h1 Welcome #{user.firstname} #{user.lastname}!
+    for article in articles
+        article
+                h1 #{article.title}
+                p #{article.content}
+                a(href="/login")
+                        <button class="btn btn-info btn-lg" type="button">View sentence</button>
+
+
+
+
+    else
+            p Please log in.
+            a(href="/login") Log in
+
