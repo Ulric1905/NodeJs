@@ -17,8 +17,9 @@ html
     h1 Welcome #{user.firstname} #{user.lastname}!
     for game in games
         article
-                h1 #{game.title}
-                p #{game.desc}
+                a(href="/article/" + game.id)
+                    h1 #{game.title}
+                    p #{game.desc}
 
                 form(method="POST" action="/rankdown/" + game.id )
                     <input class="btn btn-info btn-lg" type="submit"  value="useless">
