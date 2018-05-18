@@ -89,9 +89,11 @@ const db = new Sequelize('blog', 'root', '', {
     dialect: 'mysql'
 });
 
-const Article = db.define('article', {
+const Game = db.define('game', {
     title: { type: Sequelize.STRING },
-    content: { type: Sequelize.TEXT }
+    desc: { type: Sequelize.TEXT },
+    ratio: { type: Sequelize.TINYINT }
+
 });
 
 const Log = db.define('log', {
@@ -99,32 +101,53 @@ const Log = db.define('log', {
     password: { type: Sequelize.TEXT }
 });
 app.get('/', (req, res) => {
-    Article
+    Game
     .findAll()
-    .then((articles) => {
-    res.render('homepage', { articles, user:req.user });
+    .then((games) => {
+    res.render('homepage', { games, user:req.user });
 });
 });
 
 app.post('/', (req, res) => {
-    const { title, content } = req.body;
-Article
+    const { title, desc } = req.body;
+Game
     .sync()
-    .then(() => Article.create({ title, content }))
+    .then(() => Game.create({ title, desc, ratio:0}))
 .then(() => res.redirect('/'));
 });
 app.get('/inscription', (req, res) => {
     res.render('inscription');
 });
+app.post('/rankup/:gameid', (req, res) => {
+    Game.findOne({ where: { id:req.params.gameid }})
+    .then((games) => {
+        var ratio = games.ratio;
+        games.update(
+            {ratio: db.literal('ratio + 1'),})
+        res.redirect('/');
+    })
+})
+app.post('/rankdown/:gameid', (req, res) => {
+    Game.findOne({ where: { id:req.params.gameid }})
+    .then((games) => {
+    var ratio = games.ratio;
+    games.update(
+    {ratio: db.literal('ratio - 1'),})
+    res.redirect('/');
+
+})
+})
 
 app.post('/inscription', (req, res) => {
-    const { username, password } = req.body;
-Log
-    .sync()
-    .then(() => Log.create({ username, password }))
-.then(() => res.redirect('/inscription'));
+    Log.create({email: req.body.username, password: req.body.password})
+    .then((log) => {
+    req.login(log, ()=>{
+    res.redirect('/')
+})
+})
 });
 
+// req+param
 
 db.sync();
 

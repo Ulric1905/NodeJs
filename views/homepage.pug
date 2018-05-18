@@ -1,21 +1,30 @@
 html
     head
         title Blog
+
     body
     if user
-    a(href="/login")
-            <button class="btn btn-info btn-lg" type="button">New Questions</button>
+    form(method="POST")
+                p
+                    strong Create a new article
+                label(for="title") Title
+                input(type="text", id="title", name="title", placeholder="Some Great Article Title")
+                label(for="content") Content
+                textarea(id="desc", name="desc", placeholder="Some great article content...")
+                button(type="submit") post
 
-    a(href="/login")
-        <button class="btn btn-info btn-lg" type="button">View sentence</button>
 
     h1 Welcome #{user.firstname} #{user.lastname}!
-    for article in articles
+    for game in games
         article
-                h1 #{article.title}
-                p #{article.content}
-                a(href="/login")
-                        <button class="btn btn-info btn-lg" type="button">View sentence</button>
+                h1 #{game.title}
+                p #{game.desc}
+
+                form(method="POST" action="/rankdown/" + game.id )
+                    <input class="btn btn-info btn-lg" type="submit"  value="useless">
+                p #{game.ratio}
+                form(method="POST" action="/rankup/" + game.id )
+                    <input class="btn btn-info btn-lg" type="submit" value="usefull">
 
 
 
