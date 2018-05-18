@@ -3,7 +3,7 @@ html
         title Blog
 
     body
-
+        p donner votre avis
         form(method="POST" )
             textarea(id="desc", name="desc", placeholder="Some great article content...")
             <input class="btn btn-info btn-lg" type="submit" value="usefull">
@@ -12,6 +12,7 @@ html
         h2 #{game.desc}
         h2 #{game.ratio}
 
+        p La liste des articles
         for comment in comments
-            p #{comment.userName}
-            p #{comment.desc}
+            h1 #{comment.userName}
+            h2 #{comment.desc}

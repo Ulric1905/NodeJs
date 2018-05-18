@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12d9a290-761c-4be2-8e54-647fa80205ee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/article.pug" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test.js" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/mycss.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/home.pug" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/article.pug" afterPath="$PROJECT_DIR$/views/article.pug" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/homepage.pug" afterPath="$PROJECT_DIR$/views/homepage.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/inscription.pug" afterPath="$PROJECT_DIR$/views/inscription.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/login.pug" afterPath="$PROJECT_DIR$/views/login.pug" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,31 +33,41 @@
       <file leaf-file-name="homepage.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/homepage.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="682">
+              <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="article.pug" pinned="false" current-in-tab="false">
+      <file leaf-file-name="article.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/article.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+            <state relative-caret-position="110">
+              <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1034">
-              <caret line="112" column="36" lean-forward="false" selection-start-line="112" selection-start-column="36" selection-end-line="112" selection-end-column="36" />
+            <state relative-caret-position="550">
+              <caret line="143" column="88" lean-forward="true" selection-start-line="143" selection-start-column="88" selection-end-line="143" selection-end-column="88" />
               <folding>
-                <marker date="1526636761382" expanded="true" signature="464:473" ph="{...}" />
+                <marker date="1526637807411" expanded="true" signature="523:532" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mycss.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/mycss.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -72,8 +85,8 @@
       <file leaf-file-name="inscription.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/inscription.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="242">
+              <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -92,8 +105,8 @@
       <file leaf-file-name="login.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/login.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -115,6 +128,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -135,15 +149,17 @@
         <option value="$PROJECT_DIR$/node_modules/index.js" />
         <option value="$PROJECT_DIR$/views/home.pug" />
         <option value="$PROJECT_DIR$/views/newcount.pug" />
-        <option value="$PROJECT_DIR$/views/inscription.pug" />
         <option value="$PROJECT_DIR$/node_modules/main.js" />
         <option value="$PROJECT_DIR$/index.js" />
-        <option value="$PROJECT_DIR$/views/login.pug" />
         <option value="$PROJECT_DIR$/views/rank.js" />
-        <option value="$PROJECT_DIR$/views/homepage.pug" />
         <option value="$PROJECT_DIR$/test.js" />
-        <option value="$PROJECT_DIR$/views/article.pug" />
+        <option value="$PROJECT_DIR$/css/mycss.css" />
         <option value="$PROJECT_DIR$/main.js" />
+        <option value="$PROJECT_DIR$/views/login.pug" />
+        <option value="$PROJECT_DIR$/views/inscription.pug" />
+        <option value="$PROJECT_DIR$/views/homepage.pug" />
+        <option value="$PROJECT_DIR$/public/css/mycss.css" />
+        <option value="$PROJECT_DIR$/views/article.pug" />
       </list>
     </option>
   </component>
@@ -167,9 +183,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="976" />
+    <option name="x" value="1002" />
+    <option name="width" value="926" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectView">
@@ -199,6 +214,17 @@
             <path>
               <item name="prjetQuestion" type="b2602c69:ProjectViewProjectNode" />
               <item name="prjetQuestion" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="prjetQuestion" type="b2602c69:ProjectViewProjectNode" />
+              <item name="prjetQuestion" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="prjetQuestion" type="b2602c69:ProjectViewProjectNode" />
+              <item name="prjetQuestion" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
@@ -214,9 +240,12 @@
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\dev\prjetQuestion" />
+      <recent name="D:\dev\prjetQuestion\public" />
       <recent name="D:\dev\blog-Ulric1905" />
     </key>
   </component>
@@ -253,12 +282,12 @@
       <workItem from="1526547237637" duration="4987000" />
       <workItem from="1526556744044" duration="10183000" />
       <workItem from="1526625231334" duration="4760000" />
-      <workItem from="1526630033391" duration="6721000" />
+      <workItem from="1526630033391" duration="10678000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45196000" />
+    <option name="totallyTimeSpent" value="49153000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -297,14 +326,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/inscription.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -408,7 +429,7 @@
         <state relative-caret-position="2728">
           <caret line="124" column="24" lean-forward="true" selection-start-line="124" selection-start-column="24" selection-end-line="124" selection-end-column="24" />
           <folding>
-            <marker date="1526636761382" expanded="true" signature="464:473" ph="{...}" />
+            <marker date="1526637807411" expanded="true" signature="523:532" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -514,14 +535,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/inscription.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/index.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -532,26 +545,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/rank.js" />
     <entry file="file://$PROJECT_DIR$/views/rankup.pug" />
-    <entry file="file://$PROJECT_DIR$/views/login.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/newcount.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/homepage.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -564,21 +561,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/article.pug">
+    <entry file="file://$PROJECT_DIR$/views/login.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/inscription.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1034">
-          <caret line="112" column="36" lean-forward="false" selection-start-line="112" selection-start-column="36" selection-end-line="112" selection-end-column="36" />
+        <state relative-caret-position="550">
+          <caret line="143" column="88" lean-forward="true" selection-start-line="143" selection-start-column="88" selection-end-line="143" selection-end-column="88" />
           <folding>
-            <marker date="1526636761382" expanded="true" signature="464:473" ph="{...}" />
+            <marker date="1526637807411" expanded="true" signature="523:532" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/homepage.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/mycss.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/article.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>

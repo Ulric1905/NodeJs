@@ -5,7 +5,9 @@ const session = require('express-session');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const Sequelize = require('sequelize');
+const app = express();
 
+app.use((express.static('public')))
 // This secret will be used to sign and encrypt cookies
 const COOKIE_SECRET = 'cookie secret';
 
@@ -45,7 +47,6 @@ passport.deserializeUser((email, callback) => {
 });
 
 // Create an Express application
-const app = express();
 
 // Use Pug for the views
 app.set('view engine', 'pug');
@@ -110,7 +111,7 @@ const Log = db.define('log', {
 });
 app.get('/', (req, res) => {
     Game
-    .findAll( {order: ['ratio', 'ASC'] })
+    .findAll( {order: [['ratio', 'DESC']] })
     .then((games) => {
     res.render('homepage', { games, user:req.user });
 });

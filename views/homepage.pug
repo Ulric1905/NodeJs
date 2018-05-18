@@ -1,36 +1,40 @@
 html
     head
         title Blog
+        link(rel="stylesheet" type="text/css" href="/css/mycss.css")
 
     body
     if user
-    form(method="POST")
-                p
-                    strong Create a new article
+        form(method="POST")
+            div(class="log")
+                strong Create a new article
+                br
                 label(for="title") Title
-                input(type="text", id="title", name="title", placeholder="Some Great Article Title")
-                label(for="content") Content
-                textarea(id="desc", name="desc", placeholder="Some great article content...")
-                button(type="submit") post
+                    input(type="text", id="title", name="title", placeholder="Some Great Article Title")
+                    br
+                    label(for="content") Content
+                    textarea(id="desc", name="desc", placeholder="Some great article content...")
+                    br
+                    button(type="submit") post
 
 
-    h1 Welcome #{user.firstname} #{user.lastname}!
-    for game in games
-        article
-                a(href="/article/" + game.id)
-                    h1 #{game.title}
-                    p #{game.desc}
+        div(class="listGame")
+            for game in games
+                    article
+                            a(href="/article/" + game.id)
+                                h1 #{game.title}
+                                p #{game.desc}
 
-                form(method="POST" action="/rankdown/" + game.id )
-                    <input class="btn btn-info btn-lg" type="submit"  value="useless">
-                p #{game.ratio}
-                form(method="POST" action="/rankup/" + game.id )
-                    <input class="btn btn-info btn-lg" type="submit" value="usefull">
-
-
-
-
+                            form(method="POST" action="/rankdown/" + game.id )
+                                <input class="btn btn-info btn-lg" type="submit"  value="useless">
+                            p #{game.ratio}
+                            form(method="POST" action="/rankup/" + game.id )
+                                <input class="btn btn-info btn-lg" type="submit" value="usefull">
     else
-            p Please log in.
-            a(href="/login") Log in
+        p Please log in.
+        a(href="/login") login
+
+
+
+
 
