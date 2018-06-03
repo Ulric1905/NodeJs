@@ -1,21 +1,86 @@
 const router = require('express').Router();
+const LocalStrategy = require('passport-local').Strategy;
 const passport = require('passport');
+const express = require('express');
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
+const app = express();
 const { Article, Comment, User } = require('../models');
 
-router.get('/', (req, res) => {
-    Article
-        .findAll({ include: [User] })
-        .then((articles) => {
-            User
-                .findOne({ where: { id:req.user.id}})
-                .then((user) => {
-                    console.log(req.user),
-                    res.render('website/home', { articles, loggedInUser: req.user , user});
-                })
 
-        });
+app.use((express.static('public')))
+// This secret will be used to sign and encrypt cookies
+const COOKIE_SECRET = 'cookie secret';
+
+
+passport.use(new LocalStrategy((username, password, callback)=> {
+    User
+        .findOne({ where: { username, password }})
+        .then((user)=> {
+            if (user){
+                callback(null, user);
+            }else {
+                callback(null,false, {
+                    message: 'Invalid credentials'
+                });
+            }
+        })
+        .catch(callback);
+}));
+// Save the user's email address in the cookie
+passport.serializeUser((user, cb) => {
+    cb(null, user.username);
 });
+passport.deserializeUser((username, callback) => {
+    User
+        .findOne({ where: { username }})
+        .then((user)=> {
+            if (user){
+                callback(null, user);
+            }else {
+                callback(null,false, {
+                    message: 'Invalid credentials'
+                });
+            }
+        })
+        .catch(callback);
+});
+// Use Pug for the views
+app.set('view engine', 'pug');
+
+// Parse cookies so they're attached to the request as
+// request.cookies
+app.use(cookieParser(COOKIE_SECRET));
+
+// Keep track of user sessions
+app.use(session({
+    secret: COOKIE_SECRET,
+    resave: false,
+    saveUninitialized: false
+}));
+// Use Pug for the views
+app.set('view engine', 'pug');
+
+// Parse cookies so they're attached to the request as
+// request.cookies
+app.use(cookieParser(COOKIE_SECRET));
+
+// Parse form data content so it's available as an object through
+// request.body
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// Keep track of user sessions
+app.use(session({
+    secret: COOKIE_SECRET,
+    resave: false,
+    saveUninitialized: false
+}));
+
+// Initialize passport, it must come after Express' session() middleware
+app.use(passport.initialize());
+app.use(passport.session());
 
 router.get('/signin', (req, res) => {
     if (req.user) {
@@ -25,11 +90,30 @@ router.get('/signin', (req, res) => {
     res.render('website/signin');
 });
 
-router.post('/signin', passport.authenticate('local', {
-    successRedirect: '/',
-    failureRedirect: '/signin'
-}));
+router.post('/signin',
+    passport.authenticate('local', {
+        successRedirect: '/',
+        failureRedirect: '/signin'
+    })
+);
 
+
+
+router.get('/', (req, res) => {
+    console.log(req.user.id)
+    Article
+        .findAll({ include: [User] })
+        .then((articles) => {
+            User
+
+                .findOne({ where: { id:req.user.id}})
+                .then((user) => {
+                    console.log(req.user),
+                    res.render('website/home', { articles, loggedInUser: req.user , user});
+                })
+
+        });
+});
 router.get('/signup', (req, res) => {
     if (req.user) {
         return res.redirect('/');
@@ -37,6 +121,7 @@ router.get('/signup', (req, res) => {
 
     res.render('website/signup');
 });
+
 
 
 router.post('/signup', (req, res) => {
