@@ -1,0 +1,53 @@
+extends ../layout
+block main
+
+    div(class="containerQustion")
+        article
+            div(class="flex")
+                h2(class="usr") User:  #{article.user.fullname}
+                div(class="msg")
+                    h2 !{article.title}
+                    p !{article.content}
+            p Published #{article.createdAt}
+
+
+            if ( (user.role === "admin") || (article.userId === user.id) )
+                a(href="/articles/article/" + article.id)
+                    button Edit
+                    if (user.role === "admin")
+                        form(method="POST" action="/delete/article/" + article.id )
+                            input(class="btn btn-info btn-lg", type="submit", value="delete")
+
+
+        for comment in article.comments
+            article
+                div(class="flex")
+                    div(class="usr")
+                        a(href="/profile/" + comment.user.id) User:  #{comment.user.fullname}
+                    div(class="msg")
+                        p !{comment.content}
+                p Published #{article.createdAt}
+                if ( (user.role === "admin") || (article.userId === user.id) )
+                    a(href="/edit/comment/" + comment.id )
+                        button Edit
+                    if (user.role === "admin")
+                        form(method="POST" action="/delete/comment/"  + comment.id )
+                            input(class="btn btn-info btn-lg", type="submit", value="delete")
+
+        if loggedInUser
+            div(class="letAComment")
+                form(method="post")
+                    label(for="content") Comment :
+                    br
+                    textarea(id="content", name="content", placeholder="Thanks for sharing...")
+                    br
+                    button(type="submit") Comment
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600");
+h1 {
+  font-size: 32px;
+  line-height: 44px;
+  color: #393C3E;
+  font-family: 'Source Sans Pro Semibold'; }
+
+h2 {
+  font-size: 22px;
+  line-height: 32px;
+  font-family: "Source Sans Pro"; }
+
+h3 {
+  font-size: 20px;
+  line-height: 28px;
+  font-family: "Source Sans Pro Regular"; }
+
+p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #71787E; }
+
+.fancy {
+  line-height: 0.5;
+  text-align: center; }
+
+.fancy span {
+  display: inline-block;
+  position: relative; }
+
+hr {
+  size: 1px;
+  color: black; }
+
+.fancy span:before,
+.fancy span:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  top: 0;
+  width: 600px; }
+
+#eventAll {
+  margin-left: 3%; }
+
+.flex {
+  display: flex; }
+
+.titleflex {
+  width: 100%;
+  border: 1px solid grey; }
+
+.fancy span:before {
+  right: 100%;
+  margin-right: 15px; }
+
+.fancy span:after {
+  left: 100%;
+  margin-left: 15px; }
+
+.log {
+  margin-top: 15%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%; }
+  .log h2 {
+    color: #71787E; }
+
+.optionUser {
+  background-color: white;
+  width: 45%;
+  text-align: center;
+  margin-left: 5%;
+  padding: 1%;
+  margin-right: 5%;
+  margin-top: 2%; }
+  .optionUser p {
+    margin: 0px;
+    width: 70%; }
+  .optionUser img {
+    width: 100%;
+    background-color: #EFF3F6;
+    margin-left: auto;
+    margin-right: auto; }
+  .optionUser button a {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%; }
+
+.myprofil {
+  max-width: 3%;
+  background-color: dodgerblue;
+  overflow: hidden;
+  border-radius: 50px;
+  margin-top: -2%; }
+
+.usr {
+  padding-right: 2%;
+  padding-left: 0%;
+  margin-top: 0%;
+  border: solid 1px black;
+  padding-bottom: 2%; }
+
+.letAComment {
+  margin-top: 2%; }
+
+.msg {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+  .msg h2 {
+    margin-top: 0%; }
+
+.borderRadius {
+  border-radius: 5px; }
+
+.User {
+  width: 50%;
+  padding: 5%; }
+  .User article {
+    padding: 3%; }
+  .User h3 {
+    font-size: 15px; }
+  .User .pp {
+    width: 50%; }
+    .User .pp img {
+      width: 100px;
+      overflow: hidden;
+      border-radius: 50px;
+      margin-top: -2%;
+      margin-left: 20%; }
+  .User .name {
+    margin-top: auto;
+    margin-bottom: auto; }
+    .User .name input {
+      height: 22px; }
+
+.containerQustion {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  width: 85%; }
+
+.restoflog {
+  border: solid 1px gray;
+  background-color: white; }
+
+.listGame {
+  background-color: ghostwhite;
+  float: right;
+  width: 15%;
+  border-radius: 3%; }
+
+.tableauQuestion {
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto; }
+
+Article {
+  background-color: white;
+  border: solid 1px;
+  width: 100%; }
+
+.case {
+  width: 20%;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center; }
+
+.myInfo {
+  position: absolute;
+  width: 10%; }
+
+body {
+  background-color: #EFF3F6; }
+
+.logTitle {
+  background-color: ghostwhite; }
+
+.logTitle2 {
+  margin: 0px;
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-bottom: solid 1px gray;
+  padding-top: 5%; }
+
+.containLog {
+  margin-left: 5%;
+  margin-right: 5%; }
+
+.inputLog {
+  width: 100%;
+  background-color: #EFF3F6;
+  border-radius: 5px;
+  border: solid 1px gray;
+  height: 4%;
+  text-indent: 5px; }
+
+.bouttonLog {
+  width: 100%;
+  margin-top: 4%;
+  padding-top: 2%;
+  padding-bottom: 2%; }
+
+.greenbutton {
+  background-color: #26B10F;
+  color: white;
+  border: solid 1px gray;
+  border-radius: 5px; }
+
+.seearticle {
+  width: 100px !important;
+  height: 30px !important;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 30px;
+  margin-right: 50px; }
+
+.textLog {
+  margin-bottom: 1%; }
+
+.otherInfo {
+  margin-top: 2%; }
+
+.logWithOther {
+  text-align: center; }
+
+.flexButton {
+  display: flex;
+  width: 100%; }
+
+.bouttonNet {
+  padding: 10%;
+  margin: 2%; }
+
+.otherChoice {
+  margin-left: auto;
+  margin-right: auto;
+  color: gray;
+  text-decoration: none; }
+
+.right {
+  float: right; }
+
+#send {
+  max-width: 3%;
+  background-color: dodgerblue;
+  overflow: hidden;
+  border-radius: 50px;
+  margin-top: -2%;
+  position: absolute;
+  margin-right: auto;
+  margin-left: 48%; }
+
+#logo {
+  height: 60px;
+  width: 60px;
+  background-color: dodgerblue;
+  border-radius: 5px; }
+
+.mainMenu {
+  display: flex;
+  background-color: white;
+  padding: 1%; }
+
+.linkMenu {
+  margin-top: auto;
+  margin-bottom: auto; }
+
+.onelink {
+  padding-left: 10%;
+  padding-right: 10%; }
+
+.leftMenu {
+  margin-left: 10%;
+  display: grid;
+  position: absolute;
+  max-width: 10%;
+  margin-right: 0%; }
+
+.rightMenu {
+  margin-left: 30%;
+  width: 60%; }

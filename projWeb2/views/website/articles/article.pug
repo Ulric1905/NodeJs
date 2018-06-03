@@ -1,0 +1,17 @@
+extends ../../layout
+block main
+    if ( (user.role === "admin") || (article.userId === user.id) )
+        div(class="containerQustion")
+            form(method="post")
+                label(for="title") Title
+                input(id="title", name="title", type="text", placeholder="Breaking news in the IT world", value=article.title)
+                label(for="content") Content
+                textarea(id="content", name="content", placeholder="A new technology, recently introduced by...") #{article.content}
+                input(id="resolve", name="resolve" , type="checkbox", value="yes")
+                label(for="resolve") Resolu
+                button(type="submit") Post
+
+    else
+        h1 you're not allow to access to this page
+
+

@@ -1,0 +1,35 @@
+html
+    head
+        title Node.js CMS
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Poppins:300,700")
+        link(rel="stylesheet", href="/css/modern-normalize.css")
+        link(rel="stylesheet", href="/css/myscss.css")
+        script(src="/js/myScript.js")
+        script(src="/tinymce/js/tinymce/tinymce.min.js")
+        script tinymce.init({ selector:'textarea', theme: 'modern', mobile: { theme: 'mobile' } })
+
+    body
+        block header
+            header
+                div(class="mainMenu")
+                    img(src="/img/send.png" id="logo")
+                    div(class="linkMenu")
+                        a(class="onelink") lien1
+                        a(class="onelink") lien2
+                        a(class="onelink") lien3
+        main
+            block main
+        block footer
+            footer
+                nav
+                    ul
+                        if loggedInUser
+                            li
+                                a(href="/articles/new") New article
+                            li
+                                a(href="/logout") Log out
+                        else
+                            li
+                                a(href="/signin") Sign in
+                            li
+                                a(href="/signup") Sign up

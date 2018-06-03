@@ -1,0 +1,66 @@
+extends ../layout
+block main
+
+    div(class="leftMenu")
+        menu
+        a link 1
+        a link 1
+        a link 1
+        a link 1
+        a link 1
+        a link 1
+
+
+
+    div(class="rightMenu listeQuestion")
+        if (user.role === "admin")
+            div(class="flex")
+                div(class="optionUser ")
+                    img(src="/img/profil.png")
+                    br
+                    div(class="flex")
+                        p Editer les profiles des users grâce à vos droits administrateur
+                        a(href="/admin/user/editUser")
+                            button(class="greenbutton seearticle") Go !
+
+                div(class="optionUser")
+                    img(src="/img/logOut.png")
+                    br
+                    div(class="flex")
+                        p Se deconnecter
+                        a(href="/logout")
+                            button(class="greenbutton seearticle") Go !
+        else
+            div(class="optionUser")
+                img(src="/img/logOut.png")
+                br
+                div(class="flex")
+                    p Se deconnecter
+                    a(href="/logout")
+                        button(class="greenbutton seearticle") Go !
+
+
+
+        div(class="tableauQuestion")
+            article
+                h2(id="eventAll") All events
+            div(class="flex titleflex")
+                p(class="case") title
+                p(class="case") create by
+                p(class="case") date
+                p(class="case") is resolve
+                p(class="case") go to
+            for article in articles
+                article
+                    div(class="flex")
+                        p(class="case") #{article.title}
+
+                        p(class="case")
+                            a(href="/profile/" + article.user.id) #{article.user.fullname}
+                        p(class="case") #{article.createdAt}
+                        p(class="case") #{article.isresolve}
+                        a( class= "seearticle" href="/article/" + article.id)
+                            button(class="case greenbutton seearticle") Repondre
+
+
+

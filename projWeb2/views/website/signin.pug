@@ -1,0 +1,37 @@
+html
+    head
+        title Blog
+        link(rel="stylesheet" type="text/css" href="/css/myscss.css")
+
+    body
+        if error
+            h1 #{error}
+        else
+            form(method="post")
+                img(src="/img/send.png" id="send")
+                div(class="log")
+                    div(class="restoflog")
+                        div(class="logTitle")
+                            h2(class="logTitle2") Welcome back! Please login.
+                        div(class="containLog")
+                            p(class="textLog") Sign in with your e-mail address
+                            input(type="email", name="username", class="inputLog", placeholder="email")
+                            p(class="textLog") Password
+                            input(type="password", name="password", class="inputLog", placeholder="password")
+                            button(type="submit", class="bouttonLog greenbutton") Sign in the Dashboard
+                            br
+                            div(class="flexButton")
+                                hr
+                                p(class="logWithOther") login via social network
+                                hr
+                            div(class="flexButton")
+                                button(type="submit", class="bouttonNet")
+                                button(type="submit", class="bouttonNet")
+                                button(type="submit", class="bouttonNet")
+                                button(type="submit", class="bouttonNet")
+
+
+                    a(href="/signup", class="otherChoice") Don't have an account yet? Get Started
+                    a(href="/inscription", class="otherChoice right") Forget Password?
+
+

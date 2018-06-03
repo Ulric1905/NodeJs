@@ -1,0 +1,45 @@
+extends ../layout
+block main
+
+    div(class="flex")
+        div(class="User")
+            article
+                div(class="")
+                h3 Your profile
+            article
+                h3 All post
+            article
+                h3 security
+        div(class="User ")
+            article(class="borderRadius")
+                form(method="post")
+                    h2 Vos information:
+                    div(class="flex")
+                        div(class="pp")
+                            img(src="/img/Equipe_de_France_de_football_Logo.png" id="myprofil")
+                        div(class="name")
+                            label Full name :
+                            input(id="fName", name="fName", type="text", value=user.fullname)
+                    div(class="otherInfo")
+                        label bio:
+                        textarea(id="bio", name="bio") #{user.bio}
+                        label Username :
+                        br
+                        input(id="uName", name="uName", type="text", value=user.username)
+                        button(type="submit") change
+                        br
+                        label Password :
+                        form(method="post")
+                            br
+                            input(id="psd", name="psd", type="password", value="pswd")
+                            button(type="submit") change
+    div(class="flex")
+        div(class="User")
+        div(class="User ")
+            div(class="flex")
+                article(class="borderRadius")
+                    h2 Connected Service
+
+
+
+

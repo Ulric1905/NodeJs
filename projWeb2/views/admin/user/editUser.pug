@@ -1,0 +1,20 @@
+block main
+    for user in users
+        form(method="post" action="/admin/user/changeUser/" + user.id)
+            label Full name :
+            input(id="fName", name="fName", type="text", value=user.fullname)
+            label Username :
+            input(id="uName", name="uName", type="text", value=user.username)
+            label bio :
+            textarea(id="bio", name="bio") #{user.bio}
+            label role :
+            select(name="role" size="1")
+                if (user.role === "admin")
+                    option admin
+                    option user
+                if (user.role === "user")
+                    option user
+                    option admin
+
+            button(type="submit") Post
+

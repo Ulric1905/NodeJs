@@ -1,0 +1,13 @@
+extends ../../layout
+block main
+    if ( (user.role === "admin") || (comment.userId === user.id) )
+        div(class="containerQustion")
+            form(method="post")
+
+                label(for="content") Content
+                textarea(id="content", name="content") !{comment.content}
+                button(type="submit") edit
+
+
+    else
+        h1 you're not allow to access to this page
